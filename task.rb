@@ -67,7 +67,11 @@ def q8
 
   # 以下に回答を記載
 
-  # 以下は変更しないで下さい
+
+  programming_languages.map {|i| i.capitalize! }
+
+  upper_case_programming_languages = programming_languages.map {|i| i.upcase}
+  
   p programming_languages
   p upper_case_programming_languages
 end
@@ -76,14 +80,22 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-
+  names.each.with_index(1) do |name, i|
+    puts "会員No.#{i} #{name}さん"
+  end
 end
 
 def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
-
+  foods.each do |food|
+    if food.include?("うに")
+      puts "#{food}:好物です"
+    else
+      puts "#{food}:まぁまぁ好きです"
+    end
+  end
 end
 
 def q11
