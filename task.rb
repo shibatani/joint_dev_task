@@ -14,8 +14,8 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
-  array1 += array2
-  p array1
+  array = array1 + array2
+  p array
 end
 
 def q3
@@ -68,9 +68,9 @@ def q8
   # 以下に回答を記載
 
 
-  programming_languages.map {|i| i.capitalize! }
+  programming_languages.map!(&:capitalize)
 
-  upper_case_programming_languages = programming_languages.map {|i| i.upcase}
+  upper_case_programming_languages = programming_languages.map(&:upcase)
   
   p programming_languages
   p upper_case_programming_languages
@@ -102,7 +102,9 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-
+  sports.each do |sport|
+      puts sport1
+    end
 end
 
 def q12
